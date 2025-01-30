@@ -14,7 +14,8 @@ public class MainClient {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Client c = new Client("samuele");
+        c.connetti("localhost", 1905);
     }
     
 }
