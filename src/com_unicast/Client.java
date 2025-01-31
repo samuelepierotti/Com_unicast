@@ -1,34 +1,56 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com_unicast;
 
 import java.io.IOException;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
 /**
  *
- * @author studente
+ * @author andrvtl
  */
 public class Client {
+
     String nome;
     String colore;
     Socket socket;
-    
-    public Socket(String nome){
-        this.nome=nome;
+
+
+    public Client(String nome){
+
+
     }
-    
-    public void connetti(String nomeServer, int porta){
+
+    public Client(String nome, String colore){
+
+
+    }
+
+    public void connetti(String nomeServer, int portaServer){
+
         try {
-            socket = new Socket(nomeServer, porta);
-            System.out.println("La connessione è avvenuta con successo");
+            socket = new Socket(nomeServer, portaServer);
+            System.out.println("1) Connessione con il server avvenuta");
         } catch (IOException ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println("Errore nello stabilimento della connessione con il server");
         }
+
     }
-    
+
+
+    public void scrivi(){
+
+
+    }
+
+    public void leggi(){
+
+
+    }
+
 }
