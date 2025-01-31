@@ -1,38 +1,47 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com_unicast;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
 
-/**
- *
- * @author studente
- */
+
 public class Server {
     ServerSocket serverSocket;
     Socket clientSocket;
-    int invia;
-    
+    int porta;
+
     public Server(int porta){
         this.porta = porta;
+
         try {
-            serverSocket = new serverSocket(porta);
-            System.out.println("Il server è in ascolto");
-        } catch(){
-            
+            serverSocket =new.ServerSocket(porta);
+            System.out.println("1) Server in ascolto sulla porta" + porta);
+        } catch (Exception e) {
+            System.err.println("Errore del server nella fase di ascolto");
+            throw new RuntimeException(e);
         }
-        
-        public Socket attend(){
-            try{
-                clientSocket = serverSocket.accept();
-                System.out.println("2) connessione ");
-            } catch(IOException)
-        }
-        
-        public void invia(){
-            
-        }
-        
-        public void
+
     }
+
+    public Socket attendi(){
+
+        try {
+            clientSocket= serverSocket.accept();
+            System.out.println("2) Connessione avvenuta con successo, data socket creato.");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+            System.err.println("Errore nella connessione con il client");
+        }
+
+        return clientSocket;
+    }
+
+    public void invia(){
+
+    }
+
+    public void leggi(){
+
+    }
+
+
+
 }
