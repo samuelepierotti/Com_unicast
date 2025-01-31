@@ -26,8 +26,13 @@ public class Client {
     }
 
     public Client(String nome, String colore){
+        this.nome = nome;
+        this.colore = colore;
+    }
 
-
+    public Client(String nome, String colore){
+        this.nome = nome;
+        this.colore = colore;
     }
 
     public void connetti(String nomeServer, int portaServer){
@@ -38,19 +43,21 @@ public class Client {
         } catch (IOException ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
             System.err.println("Errore nello stabilimento della connessione con il server");
+            ex.printStackTrace();
         }
 
     }
 
 
     public void scrivi(){
-
-
+        
     }
-
+    
     public void leggi(){
 
-
+    }
+    public void chiudi(){
+        
     }
 
 }
