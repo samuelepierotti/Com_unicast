@@ -42,6 +42,12 @@ public class Server {
 
     }
 
+    public void scrivi(){
+        
+    }
+
+    public void 
+
 
 
 }
