@@ -57,7 +57,12 @@ public class Client {
 
     }
     public void chiudi(){
-        
+        if(socket !=NULL)
+            try {
+                socket.close();
+                System.out.println("4) Chiusura della connessione con il server");
+            } catch (IOException ex) {
+                Logger.getLogger(Client.class.getName
     }
 
 }
